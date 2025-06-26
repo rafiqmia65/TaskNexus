@@ -41,6 +41,9 @@ const Navbar = () => {
       <li className="text-lg font-medium">
         <NavLink to={"/BrowseTasks"}>Browse Tasks</NavLink>
       </li>
+      <li className="text-lg font-medium">
+        <NavLink to={"/dashboard"}>Dashboard</NavLink>
+      </li>
       {user && (
         <>
           <li className="text-lg font-medium">

@@ -12,6 +12,8 @@ import Loading from "../components/Loading/Loading";
 import TaskDetails from "../components/TaskDetails/TaskDetails";
 import UpdateTask from "../pages/UpdateTask";
 import Contact from "../pages/Contact";
+import DashboardLayout from "../pages/DashboardLayouts";
+import DashboardOverview from "../pages/DashboardOverview";
 
 export const router = createBrowserRouter([
   {
@@ -82,6 +84,31 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         Component: Contact,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: (
+      <PrivateRoutes>
+        <DashboardLayout />
+      </PrivateRoutes>
+    ),
+    children: [
+      {
+        path: "",
+        Component: DashboardOverview,
+      },
+      {
+        path: "addTask",
+        element: <AddTask></AddTask>,
+      },
+
+      {
+        path: "myPostedTasks",
+        loader: () => fetch("https://task-nexus-server.vercel.app/allTasks"),
+        element: <MyPostedTasks></MyPostedTasks>,
+        hydrateFallbackElement: <Loading></Loading>,
       },
     ],
   },
