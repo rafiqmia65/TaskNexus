@@ -60,10 +60,11 @@ src/
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/rafiqmia65/task-nexus.git
+git clone https://github.com/rafiqmia65/TaskNexus-client.git
 cd task-nexus
 
 npm run dev
 
 
 ---
+```

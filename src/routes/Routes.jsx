@@ -11,6 +11,7 @@ import PrivateRoutes from "../privateRoutes/PrivateRoutes";
 import Loading from "../components/Loading/Loading";
 import TaskDetails from "../components/TaskDetails/TaskDetails";
 import UpdateTask from "../pages/UpdateTask";
+import Contact from "../pages/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path: "login",
         Component: Login,
+      },
+      {
+        path: "contact",
+        Component: Contact,
       },
     ],
   },
